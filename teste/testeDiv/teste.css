@@ -1,0 +1,34 @@
+body {
+    background-color: #0E0D0D;
+  }
+  
+  span {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .gradient-border-bottom {
+    position: relative;
+    width: 250px;
+    padding: 1px;
+  }
+  
+  .bottom-border {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #6E035C 0%, #B94FFA 50%, #6E035C 100%);
+    background-size: 200% 100%;
+    background-position: left;
+    box-shadow: 0 0 10px #6E035C;
+    transition: background-position 0.5s ease-in-out;
+    pointer-events: none; /* para o hover funcionar no pai */
+  }
+  
+  .gradient-border-bottom:hover .bottom-border {
+    background-position: right;
+  }
+  
