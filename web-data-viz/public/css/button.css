@@ -1,0 +1,38 @@
+.div-bt-centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-bt-espumado {
+    margin-top: 5px;
+    padding: 8px 10px;
+    color: white;
+    font-size: 25px;
+    width: 80%;
+    /* height: 2px; */
+    background-position: left;
+    background-size: 200% 100%;
+    text-align: center;
+    /* box-shadow: 0 0 10px #B30E79; */
+    border-bottom: 2px solid #B30E79;
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.div-bt-espumado:hover {
+    background-position: right;
+    transform: translateY(-2px);
+    text-align: center;
+    height: 30px;
+    transition: 0.4s;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    display: block;
+    z-index: 0;
+    background: linear-gradient(to right, #B30E79 0%, #B94FFA 50%, #B30E79 100%);
+    box-shadow: 0 0 10px #B30E79;
+    color:black
+}

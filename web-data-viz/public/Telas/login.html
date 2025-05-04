@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GforWrestling</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/loginECadastro.css">
+    
+</head>
+<body>
+    <!-- Estará no "header.css" -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/imgs/raw.png" alt="Logomarca da GforWrestling" class="img-logomarca">
+            </div>
+
+            <!-- Estará no "header.css" -->
+            <!-- São os botões da header -->
+            <div class="div-botoes">
+                <div class="div-butao-subir sobre-mim" onclick="IrHomePage()">
+                    <span>Sobre mim</span>
+                    <div class="div-linha-brilhante sobre-mim"></div>
+                </div>
+
+                <div class="div-butao-subir raw">
+                    <span>Raw</span>
+                    <div class="div-linha-brilhante raw"></div>
+                </div>
+
+                <div class="div-butao-subir smackDown">
+                    <span>SmackDown</span>
+                    <div class="div-linha-brilhante smackDown"></div>
+                </div>
+
+                <div class="div-butao-subir nxt">
+                    <span>Nxt</span>
+                    <div class="div-linha-brilhante nxt"></div>
+                </div>
+
+                <div class="div-butao-subir login" onclick="Irlogin()">
+                    <span>Login</span>
+                    <div class="div-linha-brilhante login"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="div-log-cadas-container">
+        <div class="logo">
+            <img src="../assets/imgs/raw.png" alt="Logomarca da GforWrestling" class="img-logomarca">
+        </div>
+        <div class="div-txt-log-cadas">Tela de login</div>
+
+        <div class="div-teste">
+            <div class="div-card-log-e-cadas">
+                
+                <div class="div-txt-e-input">
+                    <p>E-mail:</p>
+                    <input type="email" id="ipt_email" placeholder="Digite o seu E-mail">
+                </div>
+
+                <div class="div-txt-e-input">
+                    <p>Senha:</p>
+                    <input type="password" id="ipt_senha" placeholder="Digite a sua senha">
+                </div>
+
+                <div class="div-bt-centralizar">
+                    <div class="div-bt-espumado">Login</div>
+                </div>
+
+                <div class="div-bt-centralizar">
+                    <a href="cadastro.html">Não tem conta? Cadastre-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script src="../js/navegandoTelas.js"></script>

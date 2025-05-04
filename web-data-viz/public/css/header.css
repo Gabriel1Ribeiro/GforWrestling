@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Inter', 'Rubik', 'Nunito', sans-serif;
+  margin: 0;
+  background-color: #0E0D0D;
+
+}
+
+header {
+    background-color: #0E0D0D;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 80px;
+    height: 50px;
+}
+header span {
+    position: relative; /* O "z-index" não funciona se não tiver uma "position" */
+    z-index: 1;
+    font-size: 18px;
+}
+
+header .container .div-botoes {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    width: 700px;
+    align-items: center;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+ .div-butao-subir {
+    height: 30px;
+    position: relative;
+    /* width: 3rem; */
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+
+.div-linha-brilhante {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #B30E79 0%, #B94FFA 50%, #B30E79 100%);
+    background-size: 200% 100%;
+    background-position: left;
+    box-shadow: 0 0 10px #B30E79;
+    /* transition: background-position 0.5s ease-in-out; */
+    pointer-events: none; /* para o hover funcionar no pai */
+}
+
+.div-butao-subir:hover .div-linha-brilhante{
+    background-position: right;
+    transform: translateY(-2px);
+    display: flex;
+    height: 30px;
+    transition: 0.4s;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    z-index: 0;
+}
+
+
+.div-butao-subir .sobre-mim{
+    background-size: 200% 100%;
+}
+
+.div-butao-subir .raw{
+    background: linear-gradient(to right, #FF2A2A 0%, #F74242 50%, #FF2A2A 100%);
+    box-shadow: 0 0 10px #FF2A2A;
+    background-size: 200% 100%;
+}
+
+.div-butao-subir .smackDown{
+    background: linear-gradient(to right, #1D48F7 0%, #56CCFF 50%, #1D48F7 100%);
+    box-shadow: 0 0 10px #1D48F7;
+    background-size: 200% 100%;
+}
+
+.div-butao-subir .nxt{
+    background: linear-gradient(to right, #FF5900 0%, #FF7E23 50%, #FF5900 100%);
+    box-shadow: 0 0 10px #FF5900;
+    background-size: 200% 100%;
+}
+
+.div-butao-subir .login{
+    background: linear-gradient(to right, #6e6e6e 0%, #c1c1c1 50%, #6e6e6e 100%);
+    box-shadow: 0 0 10px #6e6e6e;
+    background-size: 200% 100%;
+}
+
+
+
+.div-botoes .raw:hover {
+    border: 1px solid #FF2A2A;
+    transition: 0.6s;
+}

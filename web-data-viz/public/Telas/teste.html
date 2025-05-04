@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .typewriter {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: black;
+  padding: 10px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+  color: #1D48F7;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="typewriter">
+        <span id="text"></span>
+        <span class="cursor">|</span>
+      </div>
+      
+</body>
+</html>
+
+<script>
+
+const phrases = ["É hora do Raw...", "É hora do SmackDown", "É hora do NXT", "É hora do Show", "É hora do GforWrestling!!!"];
+const textElement = document.getElementById("text");
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type() {
+  const currentPhrase = phrases[phraseIndex];
+  
+  if (isDeleting) {
+    charIndex--;
+  } else {
+    charIndex++;
+  }
+
+  textElement.textContent = currentPhrase.slice(0, charIndex);
+
+  let speed = isDeleting ? 50 : 100;
+
+  if (!isDeleting && charIndex === currentPhrase.length) {
+    speed = 1000; // tempo de pausa após digitar
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+    speed = 200; // pausa antes de começar a próxima frase
+  }
+
+  setTimeout(type, speed);
+}
+
+type(); // inicia a digitação
+
+</script>
