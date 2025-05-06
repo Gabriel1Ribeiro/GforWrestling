@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background de Quadrados</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    section#grid-background {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    section#grid-background span {
+      display: block;
+      width: calc(6.25vw - 2px);
+      height: calc(6.25vw - 2px);
+      background: #181818;
+      transition: 1.5s;
+    }
+
+    section#grid-background span:hover {
+      background: #f00;
+      transition: 0s;
+    }
+  </style>
+</head>
+<body>
+  <section id="grid-background"></section>
+
+  <script>
+   const section = document.getElementById('grid-background');
+
+// Define o tamanho do quadrado em pixels
+const squareSize = window.innerWidth * 0.0625; // 6.25vw em pixels
+const cols = Math.ceil(window.innerWidth / squareSize);
+const rows = Math.ceil(window.innerHeight / squareSize);
+const total = cols * rows;
+
+// Cria os quadrados
+for (let i = 0; i < total; i++) {
+  const span = document.createElement('span');
+  section.appendChild(span);
+}
+  </script>
+</body>
+</html>

@@ -1,32 +1,52 @@
 body {
-    background-size: 24px 24px;
-    background-image: linear-gradient(to right,rgba(193, 193, 193, 0.063) 1px,transparent 1px)
-    ,linear-gradient(to bottom,rgba(193, 193, 193, 0.063) 1px,transparent 1px);
+    background-size: 30px 30px;
+    background-image: linear-gradient(to right,rgba(193, 193, 193, 0.063) 2px,transparent 1px)
+    ,linear-gradient(to bottom,rgba(193, 193, 193, 0.063) 3px,transparent 1px);
     color:rgba(193, 193, 193, 0.063);;
 }
 
-
 .div-log-cadas-container {
     height: 80vh;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 40px;
 }
 
-.div-teste {
-    width: 100%;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    flex-direction: column
-}
+
 
 .div-card-log-e-cadas {
     background-color: #101113;
-    border: 1px solid #B30E79;
+    /* border: 1px solid #B30E79; */
     width: 320px;
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 2px;
+    padding: 20px 35px;
+    position: relative;
+    box-shadow: 0 0 10px #B30E79;
+    /* overflow: hidden; */
 }
+
+.div-card-log-e-cadas::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    background: linear-gradient(transparent, #B30E79, transparent);
+    animation: animaBackground 4s linear infinite;
+    z-index: -1;
+}
+
+@keyframes animaBackground {
+
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{
+        transform: translateY(10%);
+    }
+}
+
 
 .div-txt-log-cadas {
     color: white;
@@ -42,15 +62,16 @@ p {
 }
 
 input {
-    background-color: #101113;
-    border: 1px solid #c1c1c1;
-    padding: 8px 10px;
-    border-radius: 5px;
+    background-color: #333;
+    border: none;
+    padding: 15px 10px;
+    border-radius: 1px;
     width: 100%;
     box-sizing: border-box;
-    color: #B30E79;
+    color: white;
     font-size: 15px;
     margin-bottom: 10px;
+    outline: none;
 }
 
 a {
@@ -58,4 +79,79 @@ a {
     color: white;
     font-size: 12px;
 
+}
+
+
+.div-bt-centralizar a {
+    font-size: 15px;
+}
+
+/* É a tag <a> do "cadastro" e "Login" */
+.div-card-log-e-cadas .link-cad-e-log {
+    justify-content: right;
+}
+
+.div-bt-centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-bt-espumado {
+    margin-top: 5px;
+    padding: 8px 10px;
+    color: white;
+    font-size: 25px;
+    width: 80%;
+    /* height: 2px; */
+    background-position: left;
+    background-size: 200% 100%;
+    text-align: center;
+    /* box-shadow: 0 0 10px #B30E79; */
+    border-bottom: 2px solid #B30E79;
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.div-bt-espumado:hover {
+    background-position: right;
+    transform: translateY(-2px);
+    text-align: center;
+    height: 30px;
+    transition: 0.4s;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    z-index: 0;
+    background: linear-gradient(to right, #B30E79 0%, #B94FFA 50%, #B30E79 100%);
+    box-shadow: 0 0 10px #B30E79;
+    color:black
+}
+
+.div-bt-espumado::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(transparent, #0e3ab3, transparent);
+    animation: buttonAnimacao 1s linear infinite;
+    z-index: -1;
+    opacity: 0;
+}
+
+.div-bt-espumado:hover ::before {
+    opacity: 1;
+}
+
+
+@keyframes buttonAnimacao {
+
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(200%);
+    }
 }
