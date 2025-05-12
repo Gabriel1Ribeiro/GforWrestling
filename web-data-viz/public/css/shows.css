@@ -1,6 +1,211 @@
+/* Cores boas
+ Cinza: #313636;
+  */
+
 body {
-    background-size: 24px 24px;
-    background-image: linear-gradient(to right, rgba(29, 73, 247, 0.178) 1px,transparent 1px)
-    ,linear-gradient(to bottom,#1d49f72d 1px,transparent 1px);
-    color:rgba(193, 193, 193, 0.063);;
+    margin: 0;
+    padding: 0;
+    color: white;
 }
+
+.div-container-show {
+    display: block;
+    /* background-color: #313636; */
+    width: 100%;
+    height: 400px;
+    
+}
+
+.div-container-show .div-display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-container-show .dflex-parte1 {
+    height: 80vh;
+    width: 100vw;
+}
+
+
+.div-linha-vertical {
+    height: 15rem;
+    width: 10px;
+    border-radius: 3px;
+    background-position: left;
+    /* transition: background-position 0.5s ease-in-out; */
+    pointer-events: none; /* para o hover funcionar no pai */
+}
+
+.div-linha-horizontal {
+    height: 0.5rem; 
+    width: 18rem;
+    background-size: 200% 100%;
+    background-position: left;
+    /* transition: background-position 0.5s ease-in-out; */
+    pointer-events: none; /* para o hover funcionar no pai */
+}
+
+.div-separacao-show {
+    width: inherit;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Div para todas as vezes que tiver que usar um display: block e somente isso */
+.div-display-block {
+    display: block;
+    width: 300px;
+}
+
+/* Linha vertical que está na parte 1 das brands (que está ao lado esquerdo do nome da brand) 
+Mas agora vou colocar de todas as brands*/
+
+.div-separacao-show .linha-vert-smackDown {
+    background: #56CCFF;
+    box-shadow: 0 0 10px #56CCFF;
+}
+
+.div-separacao-show .linha-vert-raw {
+    background: #F06A6A;
+    box-shadow: 0 0 10px #F06A6A;
+}
+
+.div-separacao-show .linha-vert-nxt {
+    background: #FF8349;
+    box-shadow: 0 0 10px #FF8349;
+}
+
+/* Linha horizontal que está na parte 1 das brands (que está abaixo da img da brand) 
+Mas agora vou colocar de todas as brands*/
+
+.div-separacao-show .linha-horiz-smackDown {
+    background: #56CCFF;
+    box-shadow: 0 0 10px #56CCFF;
+}
+
+.div-separacao-show .linha-horiz-raw {
+    background: #F06A6A;
+    box-shadow: 0 0 10px #F06A6A;
+}
+
+.div-separacao-show .linha-horiz-nxt {
+    background: #FF8349;
+    box-shadow: 0 0 10px #FF8349;
+}
+
+.div-separacao-show .h1-titulo {
+    font-size: 52px;
+    margin-top: 10px;
+}
+
+/* Div da imagem das brands na tela principal */
+.div-separacao-show .div-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.div-img .img-show {
+    height: 112px;
+    width: 275px;
+    filter: drop-shadow(0 0 10px transparent);
+}
+
+/* É a class da imagem da brand (da parte 1 das telas de brands)
+o ".img-show" é no geral, mas abaixo é a cor por cada brand */
+
+.div-img .img-smackDown {
+    filter: drop-shadow(0 0 10px #1D48F7);
+}
+
+.div-img .img-raw {
+    filter: drop-shadow(0 0 10px #FF2A2A);
+}
+
+.div-img .img-nxt {
+    filter: drop-shadow(0 0 10px #FF5900);
+}
+
+.div-separacao-show .animacao-cima-baixo {
+    animation: img-cima-baixo 3s ease-in-out infinite;
+
+}
+
+@keyframes img-cima-baixo {
+
+    0%{
+        transform: translateY(-10%);
+    }
+
+    50%{
+        transform: translateY(10%);
+    }
+
+    100%{
+        transform: translateY(-10%);
+    }
+}
+
+/* Fim da primeira parte */
+
+/* Triângulos */
+.triangulo {
+    width: 0;
+    height: 0;
+    position: absolute; 
+}
+
+.triangulos .esquerda {
+    z-index: 1;
+    left: 0;
+    border-bottom: 120px solid transparent;
+    border-right: 100vw solid transparent;
+    filter: drop-shadow(0 0 10px transparent);
+}
+
+.triangulos .direita {
+    z-index: 0;
+    right: 0;
+    border-bottom: 120px solid transparent;
+    border-left: 100vw solid transparent;
+    filter: drop-shadow(0 0 10px transparent);
+}
+
+/* Triângulos do SMACKDOWN */
+.triangulos .smackDown-esquerda {
+    border-bottom: 120px solid #1D48F7;
+    filter: drop-shadow(0 0 10px rgba(29, 73, 247, 0.4));
+
+}
+
+.triangulos .smackDown-direita {
+    border-bottom: 120px solid #56CCFF;
+    filter: drop-shadow(0 0 10px rgba(29, 73, 247, 0.4));
+
+}
+
+/* Triângulos do RAW */
+.triangulos .raw-esquerda {
+    border-bottom: 120px solid #FF2A2A;
+    filter: drop-shadow(0 0 10px rgba(240, 106, 106, 0.4));
+}
+
+.triangulos .raw-direita {
+    border-bottom: 120px solid #F06A6A;
+    filter: drop-shadow(0 0 10px rgba(240, 106, 106, 0.4));
+}
+
+/* Triângulos do NXT */
+
+.triangulos .nxt-esquerda {
+    border-bottom: 120px solid #FF5900;
+    filter: drop-shadow(0 0 10px rgba(255, 89, 0, 0.4));
+}
+
+.triangulos .nxt-direita {
+    border-bottom: 120px solid #FF8349;
+    filter: drop-shadow(0 0 10px rgba(255, 89, 0, 0.4));
+}
+

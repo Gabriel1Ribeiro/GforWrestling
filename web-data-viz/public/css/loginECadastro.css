@@ -42,8 +42,12 @@ body {
         transform: translateY(-100%);
     }
 
-    100%{
+    50%{
         transform: translateY(10%);
+    }
+
+    100%{
+        transform: translateY(-100%);
     }
 }
 
@@ -73,6 +77,7 @@ input {
     margin-bottom: 10px;
     outline: none;
 }
+
 
 a {
     margin-top: 7px;
@@ -129,15 +134,16 @@ a {
     color:black
 }
 
-.div-bt-espumado::before {
+/* .div-bt-espumado::before {
     content: "";
     position: absolute;
     width: 40px;
-    height: 40px;
-    background: linear-gradient(transparent, #0e3ab3, transparent);
-    animation: buttonAnimacao 1s linear infinite;
-    z-index: -1;
-    opacity: 0;
+    height: 38px;
+    background: linear-gradient(#B30E79, #B94FFA, transparent);
+    z-index: 1;
+    animation: buttonAnimacao 2s linear infinite;
+    border-radius: 8px;
+    opacity: 1;
 }
 
 .div-bt-espumado:hover ::before {
@@ -151,7 +157,15 @@ a {
         transform: translateX(-100%);
     }
 
-    100%{
+    25%{
+        transform: translateY(-130%);
+    }
+
+    50%{
         transform: translateX(200%);
     }
-}
+    
+    100%{
+        transform: translateX(-130%);
+    }
+} */
