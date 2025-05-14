@@ -3,15 +3,15 @@ function Irlogin() {
 }
 
 function IrHomePage() {
-    window.location.href = "homePage.html";
+    window.location.href = "../pulic/index.html";
 }
 
 function IrRaw() {
-    window.location.href = "raw.html";
+    window.location.href = "../telas/raw.html";
 }
 function IrSmackDown() {
-    window.location.href = "smackDown.html";
+    window.location.href = "../telas/smackDown.html";
 }
 function IrNxt() {
-    window.location.href = "nxt.html";
+    window.location.href = "../telas/nxt.html";
 }
