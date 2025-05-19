@@ -1,9 +1,9 @@
 function Irlogin() {
-    window.location.href = "login.html";
+    window.location.href = "../telas/login.html";
 }
 
 function IrHomePage() {
-    window.location.href = "../pulic/index.html";
+    window.location.href = "../index.html";
 }
 
 function IrRaw() {

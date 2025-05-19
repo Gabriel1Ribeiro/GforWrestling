@@ -16,6 +16,7 @@ body {
 
 
 .div-card-log-e-cadas {
+    margin-top: 10rem;
     background-color: #101113;
     /* border: 1px solid #B30E79; */
     width: 320px;
@@ -39,7 +40,7 @@ body {
 @keyframes animaBackground {
 
     0%{
-        transform: translateY(-100%);
+        transform: translateY(-70%);
     }
 
     50%{
@@ -47,7 +48,7 @@ body {
     }
 
     100%{
-        transform: translateY(-100%);
+        transform: translateY(-70%);
     }
 }
 
@@ -63,6 +64,7 @@ body {
 
 p {
     color: white;
+    margin: 0;
 }
 
 input {

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - GforWrestling</title>
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/button.css">
     <link rel="stylesheet" href="../css/card.css">
     <link rel="stylesheet" href="../css/loginECadastro.css">
     
@@ -68,11 +67,12 @@
                     <a href="cadastro.html">Cadastre-se</a>
                 </div>
                 <div class="div-bt-centralizar">
-                    <div class="div-bt-espumado">Login</div>
+                    <div class="div-bt-espumado" onclick="entrar()">Login</div>
                 </div>
 
             </div>
     </div>
+    <div id="mensagem_erro" class=""></div>
 
 </body>
 </html>
@@ -126,7 +126,7 @@
                     // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                     setTimeout(function () {
-                        window.location = "./smackDown.html";
+                        window.location = "./raw.html";
                         // window.location = "./dashboard/cards.html";
                     }, 1000); // apenas para exibir o loading
 

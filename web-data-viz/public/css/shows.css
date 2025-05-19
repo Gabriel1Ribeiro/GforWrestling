@@ -17,6 +17,24 @@ body {
     margin: 0;
 }
 
+.bloco-com-video {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 98.9vw;
+    height: 100vh;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0.5; /* opcional */
+}
+
+
 .div-container-show .div-display-flex {
     display: flex;
     justify-content: center;
@@ -25,7 +43,7 @@ body {
 
 .div-container-show .dflex-parte1 {
     height: 80vh;
-    width: 100vw;
+    width: 95vw;
 }
 
 
@@ -178,7 +196,7 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
     z-index: 0;
     right: 0;
     border-bottom: 120px solid transparent;
-    border-left: 100vw solid transparent;
+    border-left: 110vw solid transparent;
     filter: drop-shadow(0 0 10px transparent);
 }
 
