@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Inter', 'Rubik', 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0c0e;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    padding: 10px;
+}
+
+.kpi-e-metrica-barra {
+    display: block;
+    /* border: 2px solid darkorchid; */
+    height: 35rem;
+    width: 50rem;
+}
+
+.metrica-rosca-e-img {
+    display: block;
+    border: 2px solid rgb(50, 60, 204);
+    height: 35rem;
+    width: 25rem;
+}
+
+.kpi-e-metrica-barra .container-kpi {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    gap: 10px;
+    height: 47%;
+    width: 62%;
+    padding: 20px;
+    box-sizing: border-box;
+    /* border: 1px solid crimson; */
+    color: white;
+}
+
+.kpi {
+    background-color: #202125;
+    width: 13rem;
+    height: 6rem;
+    /* box-shadow: 0 0 10px #B30E79; */
+    border-bottom: 3px solid #B30E79;
+    border-right: 3px solid #B30E79;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.kpi:hover {
+    /* background-color: rgba(231, 11, 154, 0.479); */
+    border-bottom: 3px solid #B30E79;
+    border-right: 3px solid #B30E79;
+    transform: translateY(-5px);
+}
+
+.div-metrica-barra {
+    /* border: 1px solid red; */
+    height: 56%;
+    width: 37rem;
+    display: flex;
+    margin-top: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    justify-content: center;
+    flex-direction: column; /* Alinha as divs internas em coluna */
+    background-color: #202125;
+}
+
+
+
+.div-titulo-metrica {
+    padding: 10px;
+    color: white;
+    height: 2rem;
+    width: 100%;
+    /* background-color: #B30E79; */
+}
+
+.div-metrica {
+    flex: 1; /* Faz com que o canvas ocupe o restante do espaço */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 550px;
+    height: 300px;
+        /* background-color: red; */
+
+}
+/* 
+#metrica-shows {
+    width: 200px;
+    height: 255px;
+} */

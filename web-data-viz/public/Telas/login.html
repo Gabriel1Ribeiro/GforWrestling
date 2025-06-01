@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - GforWrestling</title>
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/card.css">
     <link rel="stylesheet" href="../css/loginECadastro.css">
     
 </head>
@@ -49,7 +48,11 @@
     </header>
 
     <div class="div-log-cadas-container">
-        
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
             <div class="div-card-log-e-cadas">
                 <div class="div-txt-log-cadas">LOGIN</div>
                 
@@ -69,10 +72,12 @@
                 <div class="div-bt-centralizar">
                     <div class="div-bt-espumado" onclick="entrar()">Login</div>
                 </div>
-
+                    
+                    <div id="div_aguardar" class="loading-div">
+                    <img src="../assets/videos/carregamento.gif" id="loading-gif">
+                </div>
             </div>
     </div>
-    <div id="mensagem_erro" class=""></div>
 
 </body>
 </html>
@@ -84,7 +89,7 @@
 
 
     function entrar() {
-        aguardar();
+        // aguardar();
 
         var emailVar = ipt_email.value;
         var senhaVar = ipt_senha.value;
@@ -113,9 +118,10 @@
             })
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
+            console.log(resposta);
 
             if (resposta.ok) {
-                console.log(resposta);
+                console.log("entrou no if")
 
                 resposta.json().then(json => {
                     console.log(json);
@@ -125,8 +131,9 @@
                     sessionStorage.ID_USUARIO = json.id;
                     // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
-                    setTimeout(function () {
-                        window.location = "./raw.html";
+                    setTimeout( () => {
+                        console.log("indo para a dashboard");
+                        window.location = "./dashboard/mainPage.html";
                         // window.location = "./dashboard/cards.html";
                     }, 1000); // apenas para exibir o loading
 

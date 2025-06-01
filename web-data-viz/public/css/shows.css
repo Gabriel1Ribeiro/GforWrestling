@@ -35,7 +35,7 @@ body {
 }
 
 
-.div-container-show .div-display-flex {
+.div-display-flex {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,14 +116,15 @@ Mas agora vou colocar de todas as brands*/
 .div-container-show .h1-titulo {
     font-size: 52px;
     margin-top: 10px;
+    margin-bottom: 8px;
 }
 
 /* Div da imagem das brands na tela principal */
-.div-separacao-show .div-img {
+ .div-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .div-img .img-show {
@@ -220,7 +221,7 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
 }
 
 .triangulos .raw-direita {
-    border-bottom: 120px solid #F06A6A;
+    border-bottom: 120px solid #FF5900;
     filter: drop-shadow(0 0 10px rgba(240, 106, 106, 0.4));
 }
 
@@ -237,13 +238,170 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
 }
 
 
-/* História (Parte 2)*/
+/* Logomarcas (Parte 2)*/
 
 .div-container-show .div-historia {
     display: block;
     /* width: 96vw; */
     width: 100%;
-    height: 60vh;
-    background: linear-gradient(to right, #0C192B 0%, #1D3557 100%);
+    /* height: 60vh; */
+    padding-top: 20px;
+    /* background: linear-gradient(to right, #0C192B 0%, #1D3557 100%); */
+    background: #101113;
     /* padding: 0 30px; */
+
+}
+
+
+.div-titulo {
+    width: 97vw;
+    margin-left: 20px;
+    display: block;
+}
+
+.logomarcas {
+    margin-top: 5rem;
+    padding: 0 60px;
+    display: block;
+}
+
+.div-separacao-por-3 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logomarcas img {
+    width: 150px;
+    /* width: 170px; */
+    height: 90px;
+}
+
+ .img-logo-ajuste-1 {
+    width: 150px !important;
+    height: 90px !important;
+
+}
+.logo-e-texto .div-texto {
+    text-align: center;
+    margin: 0;
+}
+
+.div-texto p {
+    margin: 0;
+    /* border-radius: 15px 15px 0 0; */
+    border-radius: 4px 4px 0 0;
+    font-weight: bold;
+}
+
+.p-smackDown {
+    background-color: #56CCFF;
+    color: #04325a;
+
+}
+
+.logomarcas .logo-e-texto-smackDown{
+    position: relative;
+    overflow: hidden;
+    background-color: #1c1c1c;
+    border-radius: 4px;
+    /* box-shadow: 0 0 10px; */
+    border: 1px solid #56CCFF;
+    /* color: white; */
+    transition: color 0.3s;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.logo-e-texto::before {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(to right, #1D48F7 0%, #56CCFF 50%, #1D48F7 100%); */
+    transition: bottom 0.4s ease;
+    z-index: -1;
+}
+
+.logomarcas .logo-e-texto-smackDown::before {
+    background: linear-gradient(to right, #005BAC 0%, #56CCFF 50%, #005BAC 100%);
+}
+
+.logo-e-texto:hover::before {
+  bottom: 0;
+}
+
+.logomarcas .div-linha-horizontal {
+    width: 150px;
+    height: 6px;
+}
+
+/* CHAMPIONS (PARTE 3) */
+.cinturoes {
+    padding: 10px;
+    /* border-radius: 12px; */
+    background-size: 400% 400%;
+    animation: bordaBrilhante 6s linear infinite;
+    width: 97.2vw;
+    height: 600px;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cintu-smack {
+    background: linear-gradient(45deg, #005BAC, #56CCFF, #005BAC);
+}
+
+.cinturoes::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    z-index: -1;
+    background: inherit;
+    border-radius: inherit;
+    filter: blur(4px);
+}
+
+/* Animação para as cores de moverem */
+@keyframes bordaBrilhante {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.div-por-cima {
+    width: 97%;
+    height: 97%;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.div-titulo-cinturoes {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.div-linha-champion {
+    /* background: #ffc400; */
+    background: linear-gradient(45deg, #FFD700, #f1ffa0, #DAA520);
+    background-size: 400% 400%;
+    box-shadow: 0 0 10px #ffde4b;
+    height: 0.5rem; 
+    width: 18rem;
+    margin: 0 auto;
+    animation: bordaBrilhante 4s linear infinite;
 }

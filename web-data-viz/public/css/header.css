@@ -115,7 +115,7 @@ header .container .div-botoes {
 
 .div-butao-subir .raw{
     background: linear-gradient(to right, #FF2A2A 0%, #F74242 50%, #FF2A2A 100%);
-    box-shadow: 0 0 10px #FF2A2A;
+    box-shadow: 0 0 10px rgb(255, 42, 42);
     background-size: 200% 100%;
 }
 

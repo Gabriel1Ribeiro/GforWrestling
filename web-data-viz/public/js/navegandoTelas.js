@@ -3,7 +3,7 @@ function Irlogin() {
 }
 
 function IrHomePage() {
-    window.location.href = "../index.html";
+    window.location.href = "../telas/index.html";
 }
 
 function IrRaw() {
