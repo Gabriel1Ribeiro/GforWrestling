@@ -1,7 +1,8 @@
 body{
     background-size: 24px 24px;
     background-image: linear-gradient(to right,#4f4f4f10 1px,transparent 1px)
-  ,linear-gradient(to bottom,#4f4f4f10 1px,transparent 1px);
+    ,linear-gradient(to bottom,#4f4f4f10 1px,transparent 1px);
+    margin: 0;
 }
 
 .home-container {
@@ -18,7 +19,7 @@ body{
     z-index: 0;
     width: 100%;
     height: auto;
-    display: block; /* Remove espaços em branco embaixo da imagem */
+    display: block; /*Remove espaços em branco embaixo da imagem */
 }
 
 .introducao .div-txt-introducao {
@@ -46,4 +47,182 @@ body{
     font-size: 25px;
     text-align: left;
     
+}
+
+.div-texto img {
+    width: 250px !important;
+    height: 250px !important;
+    margin-left: 30px;
+    filter: drop-shadow(0 0 10px gold);
+}
+
+.div-historia-wwe {
+    /* width: 98.9vw; */
+    width: 100%;
+    height: 500px;
+    /* background-color: #B30E79; */
+    color: white;
+}
+
+.h1-titulo {
+    margin: 10px;
+}
+
+.div-linha-horizontal {
+    height: 0.5rem; 
+    width: 18rem;
+    background-size: 200% 100%;
+    background-position: left;
+    /* transition: background-position 0.5s ease-in-out; */
+    pointer-events: none; /* para o hover funcionar no pai */
+    background: #B30E79;
+    box-shadow: 0 0 10px #B30E79;
+}
+
+.div-titulo {
+    /* width: 90vw; */
+    margin-left: 20px;
+    display: block;
+}
+
+.div-texto-historia {
+    margin-top: 30px;
+    width: 50%;
+    height: auto;
+}
+.div-texto-img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.div-img-historia img {
+    width: 300px;
+    height: 250px;
+    filter: drop-shadow(0 0 10px #FF2A2A);
+
+}
+
+.div-container-cinturoes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.div-img-cinturoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 15px ;
+}
+
+.div-img-cinturoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 15px ;
+}
+
+.cinturoes {
+    padding: 10px;
+    background-size: 400% 400%;
+    /* animation: bordaBrilhante 6s linear infinite; */
+    width: 97.2vw;
+    /* height: 600px; */
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .div-por-cima {
+    width: 97%;
+    height: 97%;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    padding: 10px 0;
+    text-align: center;
+} */
+
+.div-titulo-cinturoes .div-linha-champion {
+    /* background: #ffc400; */
+    background: linear-gradient(45deg, #FFD700, #f1ffa0, #DAA520);
+    background-size: 400% 400%;
+    box-shadow: 0 0 10px #ffde4b;
+    height: 0.5rem; 
+    width: 18rem;
+    margin: 0 auto;
+    /* animation: bordaBrilhante 4s linear infinite; */
+}
+
+.div-por-cima {
+    width: 97%;
+    height: 97%;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 10px 0;
+    filter: drop-shadow(0 0 10px black);
+    transition: 0.3s;
+}
+
+.div-por-cima:hover {
+    width: 100%;
+    height: 97%;
+    background-color: #00000027;
+    /* animation: bordaBrilhante 6s linear infinite; */
+    /* background: linear-gradient(to right, #B30E79 0%, #6d0147 50%, #B30E79 100%); */
+    /* box-shadow: 0 0 10px #B30E79; */
+
+}
+
+.div-container-ppv {
+    width: 97%;
+    height: 97%;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+.cinturoes .div-container-cinturoes .div-borda-dos-cinturoes {
+    width: 300px;
+    height: 200px;
+    margin-top: 30px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #f1ffa0, #FFD700, #FFD700);
+    animation: bordaBrilhante 4s linear infinite;
+    background-size: 400% 400%;
+    box-shadow: 0 0 10px #FFD700;
+    cursor: pointer;
+}
+
+.div-borda-dos-cinturoes:hover {
+    background: linear-gradient(to right, #B30E79 0%, #B94FFA 50%, #B30E79 100%);
+    box-shadow: 0 0 10px #B30E79;
+    background-size: 400% 400%;
+}
+
+@keyframes bordaBrilhante {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

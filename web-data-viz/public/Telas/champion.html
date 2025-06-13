@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champion</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/champion.css">
+</head>
+<body>
+    <!-- Estará no "header.css" -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/icon/logo.png" alt="Logomarca da GforWrestling" class="img-logomarca">
+            </div>
+
+            <!-- Estará no "header.css" -->
+            <!-- São os botões da header -->
+            <div class="div-botoes">
+                <div class="div-butao-subir sobre-mim" onclick="IrHomePage()">
+                    <span>Sobre mim</span>
+                    <div class="div-linha-brilhante sobre-mim"></div>
+                </div>
+
+                <div class="div-butao-subir raw" onclick="IrRaw()">
+                    <span>Raw</span>
+                    <div class="div-linha-brilhante raw"></div>
+                </div>
+
+                <div class="div-butao-subir smackDown" onclick="IrSmackDown()">
+                    <span>SmackDown</span>
+                    <div class="div-linha-brilhante smackDown"></div>
+                </div>
+
+                <div class="div-butao-subir nxt" onclick="IrNxt()">
+                    <span>Nxt</span>
+                    <div class="div-linha-brilhante nxt"></div>
+                </div>
+
+                <div class="div-butao-subir login" onclick="Irlogin()">
+                    <span>Login</span>
+                    <div class="div-linha-brilhante login"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="div-container">
+        <div class="div-img">
+                <img src="../assets/Wrestlers/JohnCena.png">
+            </div>
+        <div class="div-escuro">
+            <div class="div-display-block">
+                <h1>JOHN CENA</h1>
+
+                <div class="div-infos">
+                    
+                        <div class="div-parte1">
+                            <div class="div-h2">
+                                <h3>Número de reinados: <span>17</span> </h3> 
+                            </div>
+                            <div class="div-descricao">
+                                John Cena é uma das maiores estrelas da história da WWE, conhecido por seus 17 títulos mundiais, seu carisma no ringue e o lema "Never Give Up". Ele foi o rosto da empresa por mais de uma década.
+                            </div>
+                        </div>
+
+                    <div class="linha"></div>
+                        <div class="div-dias-campeao">
+                            <h3>Dias com o título</h3> <span>44</span>
+                            <h3>Nota para o reinado:</h3>
+                            <!-- TEM UM <BR> ABAIXO -->
+                            <input type="number" id="ipt_nota_reinado" class="ipt_reinado"> <br>
+                            <button onclick="enviarNota()" class="botao_enviar">Enviar</button>
+                        </div>
+
+                        
+                </div>
+            
+            </div> 
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script src="../js/navegandoTelas.js"></script>
+
+
+<script>
+
+</script>

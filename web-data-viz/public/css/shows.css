@@ -2,6 +2,10 @@
  Cinza: #313636;
   */
 
+a {
+    text-decoration: none;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -103,12 +107,12 @@ Mas agora vou colocar de todas as brands*/
     box-shadow: 0 0 10px #56CCFF;
 }
 
-.div-separacao-show .linha-horiz-raw {
+.div-container-show .linha-horiz-raw {
     background: #F06A6A;
     box-shadow: 0 0 10px #F06A6A;
 }
 
-.div-separacao-show .linha-horiz-nxt {
+.div-container-show .linha-horiz-nxt {
     background: #FF8349;
     box-shadow: 0 0 10px #FF8349;
 }
@@ -125,6 +129,13 @@ Mas agora vou colocar de todas as brands*/
     justify-content: center;
     align-items: center;
     padding: 0 20px 20px 20px;
+}
+
+.logo-e-texto-raw {
+    display: grid;
+}
+.logo-e-texto-nxt {
+    display: grid;
 }
 
 .div-img .img-show {
@@ -221,7 +232,7 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
 }
 
 .triangulos .raw-direita {
-    border-bottom: 120px solid #FF5900;
+    border-bottom: 120px solid #F06A6A;
     filter: drop-shadow(0 0 10px rgba(240, 106, 106, 0.4));
 }
 
@@ -254,7 +265,7 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
 
 
 .div-titulo {
-    width: 97vw;
+    width: 90vw;
     margin-left: 20px;
     display: block;
 }
@@ -272,9 +283,9 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
 }
 
 .logomarcas img {
-    width: 150px;
+    width: 170px;
     /* width: 170px; */
-    height: 90px;
+    height: 100px;
 }
 
  .img-logo-ajuste-1 {
@@ -290,27 +301,43 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
 .div-texto p {
     margin: 0;
     /* border-radius: 15px 15px 0 0; */
+    width: auto;
     border-radius: 4px 4px 0 0;
     font-weight: bold;
+    /* background-color: #2c2c2c; */
 }
 
-.p-smackDown {
-    background-color: #56CCFF;
-    color: #04325a;
+.cinturoes p {
+    /* background-color: #2c2c2c; */
+    color: white;
 
 }
 
-.logomarcas .logo-e-texto-smackDown{
+
+.logomarcas .logo-e-texto{
+    width: 230px;
+    height: 150px;
     position: relative;
     overflow: hidden;
     background-color: #1c1c1c;
     border-radius: 4px;
     /* box-shadow: 0 0 10px; */
-    border: 1px solid #56CCFF;
     /* color: white; */
     transition: color 0.3s;
     z-index: 2;
     margin-bottom: 20px;
+}
+
+.logomarcas .logo-e-texto-smackDown{
+    border: 1px solid #56CCFF;
+}
+
+.logomarcas .logo-e-texto-raw{
+    border: 1px solid #FF2A2A;
+}
+
+.logomarcas .logo-e-texto-nxt{
+    border: 1px solid #FF5900;
 }
 
 .logo-e-texto::before {
@@ -326,7 +353,15 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
 }
 
 .logomarcas .logo-e-texto-smackDown::before {
-    background: linear-gradient(to right, #005BAC 0%, #56CCFF 50%, #005BAC 100%);
+    background: linear-gradient(to right, rgb(0, 91, 172) 0%, #56CCFF 50%, #005BAC 100%);
+}
+
+.logomarcas .logo-e-texto-raw::before {
+    background: linear-gradient(to right, rgb(255, 42, 42) 0%, #F06A6A 50%, #FF2A2A 100%);
+}
+
+.logomarcas .logo-e-texto-nxt::before {
+    background: linear-gradient(to right, rgb(255, 89, 0) 0%, #FF8349 50%, #FF5900 100%);
 }
 
 .logo-e-texto:hover::before {
@@ -341,11 +376,10 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
 /* CHAMPIONS (PARTE 3) */
 .cinturoes {
     padding: 10px;
-    /* border-radius: 12px; */
     background-size: 400% 400%;
     animation: bordaBrilhante 6s linear infinite;
     width: 97.2vw;
-    height: 600px;
+    /* height: 600px; */
     position: relative;
     z-index: 0;
     display: flex;
@@ -353,7 +387,15 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
     justify-content: center;
 }
 .cintu-smack {
-    background: linear-gradient(45deg, #005BAC, #56CCFF, #005BAC);
+    background: linear-gradient(90deg, #001f3f, #0040ff, #0080ff, #00bfff, #00e5ff, #66ccff, #0040ff);
+}
+
+.cintu-raw {
+    background: linear-gradient(90deg, #4d0000, #800000, #b30000, #e60000, #ff3333, #ff6666, #800000);
+}
+
+.cintu-nxt {
+    background: linear-gradient(90deg, #ff6600,  #ff8000,  #ff9933,  #ffb84d,  #ffd699,  #ff9933,  #ff6600);
 }
 
 .cinturoes::before {
@@ -363,10 +405,11 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
     z-index: -1;
     background: inherit;
     border-radius: inherit;
+    background-size: 400% 400%;
+    animation: bordaBrilhante 6s linear infinite;
     filter: blur(4px);
 }
 
-/* Animação para as cores de moverem */
 @keyframes bordaBrilhante {
     0% {
         background-position: 0% 50%;
@@ -384,18 +427,17 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
     height: 97%;
     background-color: #1c1c1c;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
+    padding: 10px 0;
     text-align: center;
 }
 
 .div-titulo-cinturoes {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     width: 100%;
 }
 
-.div-linha-champion {
+.div-titulo-cinturoes .div-linha-champion {
     /* background: #ffc400; */
     background: linear-gradient(45deg, #FFD700, #f1ffa0, #DAA520);
     background-size: 400% 400%;
@@ -405,3 +447,55 @@ o ".img-show" é no geral, mas abaixo é a cor por cada brand */
     margin: 0 auto;
     animation: bordaBrilhante 4s linear infinite;
 }
+
+/* Div para colocar os cards dos títulos da maneira certa */
+.cinturoes .div-container-cinturoes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.cinturoes .div-container-cinturoes .div-borda-dos-cinturoes {
+    width: 300px;
+    height: 200px;
+    margin-top: 30px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #f1ffa0, #FFD700, #FFD700);
+    animation: bordaBrilhante 4s linear infinite;
+    background-size: 400% 400%;
+    box-shadow: 0 0 10px #FFD700;
+    cursor: pointer;
+}
+
+.div-dentro-cinturoes {
+
+}
+
+.div-img-cinturoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 15px ;
+}
+
+.div-texto p {
+    font-size: 20px;
+    padding: 0 15px;
+}
+
+.div-borda-dos-cinturoes .div-por-cima {
+    width: 97%;
+    height: 97%;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    text-align: center;
+    padding: 0 ;
+}
+

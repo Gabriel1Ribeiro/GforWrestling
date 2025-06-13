@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Abertura Animada</title>
+<style>
+  /* Reset e básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+    background: #111; /* fundo escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial Black', Arial, sans-serif;
+  }
+  .container {
+    text-align: center;
+    color: white;
+  }
+  .title {
+    font-size: 5rem;
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+    animation: fadeScale 1.5s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+    transform: scale(0.8);
+    /* para brilho */
+    background: linear-gradient(90deg, #fff 30%, #bbb 50%, #fff 70%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: fadeScale, shine;
+    animation-duration: 1.5s, 3s;
+    animation-timing-function: ease, linear;
+    animation-delay: 0.3s, 1.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1, infinite;
+  }
+  /* Linha abaixo do texto */
+  .underline {
+    width: 0;
+    height: 4px;
+    background: white;
+    margin: 20px auto 0;
+    border-radius: 2px;
+    animation: growLine 1.5s ease forwards;
+    animation-delay: 1.8s;
+  }
+
+  /* Animações */
+  @keyframes fadeScale {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes growLine {
+    to {
+      width: 200px;
+    }
+  }
+  @keyframes shine {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">ABERTURA</div>
+    <div class="underline"></div>
+  </div>
+</body>
+</html>

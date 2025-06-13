@@ -10,115 +10,55 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
 </head>
 
-<body onload="obterDados()">
+<body onload="obterDadoss(); obterDadosRosca(); notasReinado();">
     <div class="container">
-        <div class="kpi-e-metrica-barra">
-            <div class="container-kpi">
+        <div class="container-kpi">
                 <div class="kpi">
-                    <h2>Texto</h2>
-                    <p>XXXXXXXXX</p>
+                    <h2>Maior Reinado</h2>
+                    <p>Tiffany Stratton - 151 dias</p>
                 </div>
+                
                 <div class="kpi">
-                    <h2>Texto</h2>
-                    <p>XXXXXXXXX</p>
+                    <h2>Mais visitada:</h2>
+                    <p>Empate</p>
                 </div>
-                <div class="kpi">
-                    <h2>Texto</h2>
-                    <p>XXXXXXXXX</p>
-                </div>
-                <div class="kpi">
-                    <h2>Texto</h2>
-                    <p>XXXXXXXXX</p>
-                </div>
-            </div>
+        </div>
+        <!-- <div class="kpi-e-metrica-barra"> -->
+            
             <div class="div-metrica-barra">
                 <div class="div-titulo-metrica">
-                    Visualizações dos shows
+                    <h2>Dias com o título</h2>
                 </div>
                 <div class="div-metrica">
                     <canvas id="metrica-shows"></canvas>
                 </div>
             </div>
             
-        </div>
+        <!-- </div> -->
 
         <div class="metrica-rosca-e-img">
+            <div class="div-titulo-metrica">
+                <h2>Entradas nas brands</h2>
+            </div>
             <div class="metrica-rosca">
+                <canvas id="ContBrands"></canvas>
             </div>
 
-            <div class="div-img">
-
-            </div>
         </div>
+
+            <div class="metrica-notas">
+                 <div class="div-titulo-metrica">
+                <h2>Entradas nas brands</h2>
+            </div>
+            <canvas id="canvasNotas"></canvas>
+                <!-- <div class="metrica-notas"></div> -->
+            </div>
     </div>
 </body>
 </html>
 
+<script src="../../js/notas.js"></script>
 <!-- <script src="/js/mainPage.js"></script> -->
+<script src="../../js/grafPorBrand.js"></script>
 
-<script>
-      // Função chamada ao carregar a página para obter e processar os dados
-    function obterDados() {
-        console.log("ENTROU AQUI");
-        // Aqui seria o endereço criado anteriormente que obteria os dados do banco de dados
-        fetch('/champion/championUltimos/')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                plotarGrafico(data); // Passando os dados corretamente para a função plotarGrafico
-            })
-            .catch(function (err) {
-                console.log(err);
-            });
-    }
-
-        // Função para plotar o gráfico com os dados
-    function plotarGrafico(dados) {
-        console.log('iniciando plotagem do gráfico...');
-
-        // Criando estrutura para o gráfico de barras
-        let labels = [];
-        let dadosGrafico = [];
-
-        // Inserindo valores recebidos em estrutura para o gráfico
-        for (let i = 0; i < dados.length; i++) {
-            let registro = dados[i];
-            labels.push(registro.nomeShow);  // Passe aqui a label do que você está tentando buscar no select do bd (XXXXX)
-            dadosGrafico.push(registro.notasReinado);  // Passe aqui os dados que você está tentando buscar no select bd (YYYYY)
-        }
-
-        console.log('O gráfico será plotado com os seguintes valores:');
-        console.log('Labels:', labels);
-        console.log('Dados:', dadosGrafico);
-
-        // Configurando o gráfico de barras
-        const config = {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: 'notasReinado',
-                    data: dadosGrafico,
-                    backgroundColor: [
-                        'rgb(185, 79, 250)',
-                        'rgb(179, 14, 121)',
-                        'rgb(73, 3, 117)',
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        };
-
-        // Plotando o gráfico de barras no canvas
-        let myChart = new Chart(
-            document.getElementById('metrica-shows'),  // Chamando o gráfico pelo ID do canvas
-            config
-        );
-    }
-
-
-</script>
+<script src="../../js/diasReinado.js"></script>
